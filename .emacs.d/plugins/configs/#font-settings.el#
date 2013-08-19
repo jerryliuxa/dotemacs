@@ -1,0 +1,15 @@
+
+;; Fonts setting
+;; 设置两个字体变量，一个中文的一个英文的
+;; 之所以两个字体大小是因为有的中文和英文相同字号的显示大小不一样，需要手动调整一下。
+(setq cjk-font-size 16)
+(setq ansi-font-size 16)
+
+;; 设置一个字体集，用的是create-fontset-from-fontset-spec内置函数
+;; 中文一个字体，英文一个字体混编。显示效果很好。
+
+
+
+(set-frame-font "fontset-myfontset")
+
+
