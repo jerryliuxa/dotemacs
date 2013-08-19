@@ -1,6 +1,6 @@
-;; Setting By Hua Liang [ [ Stupid ET ] Cedric Porter ]
-;; Mail:    et@everet.org
-;; website: http://EverET.org
+;; Setting By Jerry Liu
+;; Mail:    huhu2k@gmail.com
+;; website: https://github.com/jerryliuxa
 
 ;;Personal information
 (setq user-full-name "Jerry Liu")
@@ -55,6 +55,12 @@
 
 (require 'my-tramp-settings)
 
+(require 'my-perl-settings)
+
+(require 'my-autopair-settings)
+
+(require 'my-package-settings)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -63,7 +69,7 @@
  '(ecb-options-version "2.40")
  '(session-use-package t nil (session)))
 
-(set-language-environment 'Chinese-GB)
+(set-language-environment 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (set-clipboard-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -80,3 +86,4 @@
 (add-hook 'window-setup-hook 'maximize-frame t)
 
 (put 'upcase-region 'disabled nil)
+
