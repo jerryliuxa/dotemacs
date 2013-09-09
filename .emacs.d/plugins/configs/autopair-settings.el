@@ -4,6 +4,7 @@
 
 (require 'autopair)
 (require 'util)
+(require 'electric)
 
 (defun autopair-settings ()
   "settings for `autopair'."
@@ -36,7 +37,16 @@
   (eal-eval-by-modes
    modes-use-self-opening
    (lambda (mode)
-     (change-autopair-insert-opening))))
+     (change-autopair-insert-opening)))
+  ;;使用易码肆24内嵌的功能：
+  ;;编辑时智能缩进，类似于C-j的效果——这个C-j中，zencoding和electric-pair-mode冲突
+  (electric-indent-mode t)
+  ;;系统本身内置的智能自动补全括号
+  (electric-pair-mode t)
+  ;;特定条件下插入新行
+  ;(electric-layout-mode t)
+
+)
 
 (eval-after-load "autopair"
   '(autopair-settings))

@@ -29,6 +29,41 @@
 (add-hook 'c-mode-common-hook 'doxymacs-mode)
 
 ;;-------------------- doxymacs --------------------
+(defconst doxymacs-C++-file-comment-template
+ '(
+   "/******************************************************************************" > n
+   "*" > n
+   "* " "FILE NAME   :"
+   (if (buffer-file-name)
+       (file-name-nondirectory (buffer-file-name))
+     "") > n
+   "*" > n
+   "*" " DESCRIPTION :"> n
+   "*" > n
+   "*" "    "> n
+   "*" > n
+   "*" " HISTORY     :"> n
+   "*" > n
+   "*" "    See Log at end of file"> n
+   "*" > n
+   "*" "(c) Ericsson AB 2013 - All Rights Reserved "> n
+ "*" > n
+ "*" "No part of this material may be reproduced in any form" > n
+ "*" "without the written permission of the copyright owner. " > n
+ "*" "The contents are subject to revision without notice due" > n
+ "*" "to continued progress in methodology, design and manufacturing." > n
+ "*" "Ericsson shall have no liability for any error or damage of any" > n
+ "*" "kind resulting from the use of these documents." > n
+ "*" > n
+ "*" "Ericsson is the trademark or registered trademark of" > n
+ "*" "Telefonaktiebolaget LM Ericsson. All other trademarks mentioned" > n
+ "*" "herein are the property of their respective owners." > n
+ "*" "-------------------------------------------------------------------------------" > n
+ "*" > n
+ "*" "$Id$" > n
+ "*" > n
+ "*" "/"> n)
+ "Default C++-style template for file documentation.")
 
 
 (provide 'my-doxymacs-settings)

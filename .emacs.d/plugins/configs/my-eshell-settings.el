@@ -44,5 +44,5 @@
 ;; 		   ))
 ;; -------------------- eshell --------------------
 
-
+(require 'ssh)
 (provide 'my-eshell-settings)

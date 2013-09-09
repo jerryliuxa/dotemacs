@@ -76,7 +76,7 @@
 
 
 ;; SRecode
-;(global-srecode-minor-mode 1)
+;;(global-srecode-minor-mode 1)
 
 ;; EDE
 (global-ede-mode 1)

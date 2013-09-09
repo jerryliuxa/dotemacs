@@ -37,7 +37,6 @@
 (require 'my-octopress-settings)
 
 (require 'my-cedet-settings)
-;(load-file "~/.emacs.d/plugins/cedet-bzr/cedet-devel-load.el")
 
 (require 'my-gud-settings)
 
@@ -61,29 +60,40 @@
 
 (require 'my-package-settings)
 
+(require 'flymake-settings)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ecb-options-version "2.40")
+ '(ede-project-directories (quote ("c:/Code/libitk")))
  '(session-use-package t nil (session)))
 
-(set-language-environment 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-clipboard-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-buffer-file-coding-system 'utf-8)
-(set-default-coding-systems 'utf-8)
-(set-selection-coding-system 'utf-8)
-(modify-coding-system-alist 'process "*" 'utf-8)
-(setq default-process-coding-system '(utf-8 . utf-8))
-(setq-default pathname-coding-system 'utf-8)
-(set-file-name-coding-system 'utf-8)
+(set-language-environment 'Chinese-GB)                                                                                             
+(set-keyboard-coding-system 'euc-cn)                                                                                               
+(set-clipboard-coding-system 'euc-cn)                                                                                              
+(set-terminal-coding-system 'euc-cn)                                                                                               
+(set-buffer-file-coding-system 'euc-cn)                                                                                            
+(set-selection-coding-system 'euc-cn)                                                                                              
+(modify-coding-system-alist 'process "*" 'euc-cn)                                                                                  
+(setq default-process-coding-system                                                                                                
+             '(euc-cn . euc-cn))                                                                                                    
+(setq-default pathname-coding-system 'euc-cn) 
 (setq ansi-color-for-comint-mode t)
+
 
 (require 'maxframe)
 (add-hook 'window-setup-hook 'maximize-frame t)
 
+(setq stack-trace-on-error t)
+
 (put 'upcase-region 'disabled nil)
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
